@@ -3,6 +3,8 @@ const Spot = require('../models/Spot')
 module.exports = {
 
   async index(req, res){
+    //retorna uma lista de spots
+    
     const { tech } = req.query;
 
     const spots = await Spot.find({ techs: tech})
